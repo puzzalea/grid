@@ -1,0 +1,114 @@
+/*!
+ * Puzzle Grid v1.0.0 by Puzzalea
+ * Docs: https://github.com/puzzalea/grid
+ */
+
+@mixin make_columns($size) {
+    @for $i from 1 through $col_num {
+        .col.#{$size}-#{$i} {
+            @include flex-basis(100% / $col_num * $i);
+            width: 100% / $col_num * $i;
+        }
+    }
+    
+    .col {
+        &.#{$size}-left0 {
+            margin-left: 0;
+        }
+
+        &.#{$size}-right0 {
+            margin-right: 0;
+        }
+    }
+
+    @for $i from 1 to $col_num {
+        .col {
+            &.#{$size}-left-#{$i} {
+                margin-left: 100% / $col_num * $i;
+            }
+
+            &.#{$size}-right-#{$i} {
+                margin-right: 100% / $col_num * $i;
+            }
+        }
+    }
+
+    @each $name, $value in $miscellaneous_widths {
+        .col {
+            &.#{$size}-#{$name} {
+                @include flex-basis(100% / $col_num * $value);
+                width: 100% / $col_num * $value;
+            }
+    
+            &.#{$size}-left-#{$name} {
+                margin-left: 100% / $col_num * $value;
+            }
+    
+            &.#{$size}-right-#{$name} {
+                margin-right: 100% / $col_num * $value;
+            }
+        }
+    }
+    
+    .col {
+        &.#{$size}-center {
+            margin: 0 auto;
+        }
+        
+        &.#{$size}-uncenter {
+            margin: 0;
+        }
+        
+        &.#{$size}-fill {
+            @include flex-grow(1);
+        }
+        
+        &.#{$size}-unfill {
+            @include flex-grow(0);
+        }
+    }
+    
+    .#{$size}-show {
+        display: block;
+    }
+    
+    .#{$prefix}row.#{$size}-show {
+        @include display-flex;
+    }
+    
+    span.#{$size}-show {
+        display: inline;
+    }
+    
+    .#{$size}-hide {
+        display: none;
+    }
+}
+
+.#{$prefix}row {
+    @include display-flex;
+    @include flex-wrap(wrap);
+    max-width: $max-width;
+    margin: 0 auto;
+}
+
+.col {
+    @include flex(0 1 auto);
+    min-width: 0;
+}
+
+.col-inner {
+    width: calc(100% - 20px);
+    margin: 10px;
+    padding: 15px;
+}
+
+@each $size, $value in $sizes {
+    @if $value == 0 {
+        @include make_columns($size);
+    } @else {
+        @include breakpoint($value) {
+            @include make_columns($size);
+        }
+    }
+}
