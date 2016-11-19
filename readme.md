@@ -1,11 +1,10 @@
 # Puzzle Grid
 
-#### Just another CSS grid.
-
+Just another CSS grid.
 
 ## Introduction
 
-Puzzle Grid is a responsive flexbox grid by [Puzzalea](https://github.com/puzzalea) (a.k.a. [caraheacock](https://github.com/caraheacock/)).
+Puzzle Grid is a responsive flexbox grid created [Puzzalea](https://github.com/puzzalea) (a.k.a. [caraheacock](https://github.com/caraheacock/)).
 
 I made this grid because I didn't like the other grids. I wanted a flexible grid that was JUST a grid (no other utility classes) and used flexbox. I designed Puzzle Grid with flexibility in mind; many class names, breakpoints, etc. are customizable. You can even change the number of columns if you need to.
 
@@ -32,43 +31,63 @@ Puzzle Grid was generated using SASS. It was coded to be extremely flexible and 
 
 This documentation uses the default number of columns and breakpoints as examples, but these can be adjusted using the Custom Setup directions above.
 
-Puzzle Grid's classes contain the size they take effect and how many columns they span across or push left and right. Sizes currently include "xs" (extra small, which works at all sizes), "sm" (small), "md" (medium), "lg" (large), and "xl" (extra large).
+### Sizes
 
-To use these classes, with the except of classes for hiding and showing, divs MUST have the class ".col" and be direct children of a div with the class ".pz-row". The .pz-row container is a flex container, and the .col divs inside employ flexbox to change size.
+Puzzle Grid's classes contain the size they take effect and how many columns they span across or push left and right. Sizes currently include:
+
+- `xs` - extra small, which works at all sizes
+- `sm` - small, 480px
+- `md` - medium, 660px
+- `lg` - large, 850px
+- `xl` - extra large, 1024px
+
+To use these classes, with the except of classes for hiding and showing, divs MUST have the class `.col` and be direct children of a div with the class `.pz-row`. The `.pz-row` container is a flex container, and the `.col` divs inside employ flexbox to change size.
+
+### Widths
 
 The most basic usage of the grid system is to determine how wide a div will be at certain widths.
 
-- For example, .xs-12 means the affected div will be full width. .xs-6 means the affected div will be 6 columns wide, or half width.
-- A .col with the chained classes .xs-12.md-4 will be full width to start, and shrink to 4 columns wide (one third width) at the medium size.
-- A .col with the chained classes .xs-6.xl-8 will be 6 columns to start, and will .pz-row to 8 columns wide at the extra large width.
+- For example, `.xs-12` means the affected div will be full width. `.xs-6` means the affected div will be 6 columns wide, or half width.
+- A `.col` with the chained classes `.xs-12.md-4` will be full width to start, and shrink to 4 columns wide (one third width) at the medium size.
+- A `.col` with the chained classes `.xs-6.xl-8` will be 6 columns to start, and will `.pz-row` to 8 columns wide at the extra large width.
 
-It is also important to note that these classes are meant to be used mobile-first, which is why "xs" is the start size and can be overridden as the screen becomes larger.
+It is also important to note that these classes are meant to be used mobile-first, which is why `xs` is the start size and can be overridden as the screen becomes larger.
 
 For edge cases where you might not always be working in strictly a 12 column grid, there are additional classes that divide into fifths (one-fifth, two-fifths, three-fifths, and four-fifths) and eighths (one-eighth, three-eighths, five-eighths, and seven-eighths).
 
-- A .col with the class .xs-one-fifth will be 20% wide.
-- A .col with the class .xs-three-eighths will be 37.5% wide.
+- A `.col` with the class `.xs-one-fifth` will be 20% wide.
+- A `.col` with the class `.xs-three-eighths` will be 37.5% wide.
+
+### Pushing
 
 We also have classes for pushing.
 
-- .sm-left-2 means there are 2 empty columns to the left of the .col at the small size (pushing the .col itself to the right).
-- .lg-right4 means there are 4 empty columns to the right of the affected div at the large size, which will push over any content immediately following.
+- `.sm-left-2` means there are 2 empty columns to the left of the `.col` at the small size (pushing the `.col` itself to the right).
+- `.lg-right4` means there are 4 empty columns to the right of the affected div at the large size, which will push over any content immediately following.
 
-If you only have one .col in a .pz-row, you can use the center and uncenter classes.
+### Centering
 
-- .sm-center means the div will be centered at the small width.
-- A div with the chained classes .xs-center.lg-uncenter means the div will be centered at the beginning but will uncenter (align left) at the large width.
+If you only have one `.col` in a `.pz-row`, you can use the center and uncenter classes.
 
-You can use the fill class to have a .col fill the remaining space. This is handy if you want a .col to fill the remaining space in a.pz-row regardless of the size of other elements.
+- `.sm-center` means the div will be centered at the small width.
+- A div with the chained classes `.xs-center.lg-uncenter` means the div will be centered at the beginning but will uncenter (align left) at the large width.
 
-- .xs-fill means the .col will .pz-row to fill the remaining space in a .pz-row.
-- A .col with the chainined classes .xs-fill.lg-unfill means the div will fill the remaining space to start, and will revert to its automatic size at the large width.
+### Fill
 
-We have utility classes for hiding and showing, which do NOT have to be used strictly on divs with the class ".col".
+You can use the fill class to have a `.col` fill the remaining space. This is handy if you want a `.col` to fill the remaining space in a `.pz-row `regardless of the size of other elements.
 
-- An element with the classes .xs-hide.lg-show will be hidden to start and will appear at the large width.
+- `.xs-fill` means the `.col` will fill the remaining space in a `.pz-row`.
+- A `.col` with the chained classes `.xs-fill.lg-unfill` means the div will fill the remaining space to start, and will revert to its automatic size at the large width.
 
-Lastly, there is a utility class called .col-inner which is added as needed for inner margin/padding. Margin/padding is not directly applied to .col divs (except left and right pushes) to allow us to nest.pz-rows and columns within.pz-rows and columns if needed, without chaining the effects of margin and padding.
+### Show/Hide
+
+We have utility classes for hiding and showing, which do NOT have to be used strictly on divs with the class `.col`.
+
+- An element with the classes `.xs-hide.lg-show` will be hidden to start and will appear at the large width.
+
+### Spacing
+
+There is a utility class called `.col-inner` which is added as needed for inner margin/padding. Margin/padding is not directly applied to `.col` divs (except left and right pushes) to allow us to nest `.pz-row`s and `.col`s within `.pz-row`s and `.col`s if needed, without chaining the effects of margin and padding.
 
 ## Questions? Comments?
 
