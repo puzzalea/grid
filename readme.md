@@ -49,7 +49,7 @@ The most basic usage of the grid system is to determine how wide a div will be a
 
 - For example, `.xs-12` means the affected div will be full width. `.xs-6` means the affected div will be 6 columns wide, or half width.
 - A `.col` with the chained classes `.xs-12.md-4` will be full width to start, and shrink to 4 columns wide (one third width) at the medium size.
-- A `.col` with the chained classes `.xs-6.xl-8` will be 6 columns to start, and will `.pz-row` to 8 columns wide at the extra large width.
+- A `.col` with the chained classes `.xs-6.xl-8` will be 6 columns to start, and will grow to 8 columns wide at the extra large width.
 
 It is also important to note that these classes are meant to be used mobile-first, which is why `xs` is the start size and can be overridden as the screen becomes larger.
 
