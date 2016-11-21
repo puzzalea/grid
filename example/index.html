@@ -3,10 +3,249 @@
 <head>
     <title>Puzzle Grid</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="../css/puzzle-grid.min.css" type="text/css" media="all">
+    <link rel="stylesheet" id="wbg-google-fonts-css" href="//fonts.googleapis.com/css?family=Open+Sans%3A300italic%2C400italic%2C600italic%2C700italic%2C800italic%2C400%2C300%2C600%2C700%2C800&amp;ver=4.6.1" type="text/css" media="all">
     <style>
+    body {
+        font-family: "Open Sans", sans-serif;
+    }
+    
+    .pz-row {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        border-bottom: 3px solid rgba(141, 154, 220, 0.3);
+    }
+    
+    .col {
+        display: flex;
+    }
+    
+    .col-inner {
+        display: flex;
+        flex: 0 1 auto;
+        align-items: center;
+        justify-content: center;
+        background-color: #5060B4;
+        color: #fff;
+        font-size: 18px;
+        font-weight: 600;
+        text-align: center;
+    }
     </style>
 </head>
 <body>
-    <h1>Puzzle Grid</h1>
+    <h2>Basic Usage</h2>
+    <div class="pz-row">
+        <div class="col xs-12">
+            <div class="col-inner">
+                xs-12
+            </div>
+        </div>
+    </div>
+    <div class="pz-row">
+        <div class="col xs-12 xl-11">
+            <div class="col-inner">
+                xs-12 xl-11
+            </div>
+        </div>
+        <div class="col xs-12 xl-1">
+            <div class="col-inner">
+                xs-12 xl-1
+            </div>
+        </div>
+    </div>
+    <div class="pz-row">
+        <div class="col xs-12 xl-10">
+            <div class="col-inner">
+                xs-12 xl-10
+            </div>
+        </div>
+        <div class="col xs-12 xl-2">
+            <div class="col-inner">
+                xs-12 xl-2
+            </div>
+        </div>
+    </div>
+    <div class="pz-row">
+        <div class="col xs-12 lg-9">
+            <div class="col-inner">
+                xs-12 lg-9
+            </div>
+        </div>
+        <div class="col xs-12 lg-3">
+            <div class="col-inner">
+                xs-12 lg-3
+            </div>
+        </div>
+    </div>
+    <div class="pz-row">
+        <div class="col xs-12 md-6 lg-8">
+            <div class="col-inner">
+                xs-12 md-6 lg-8
+            </div>
+        </div>
+        <div class="col xs-12 md-6 lg-4">
+            <div class="col-inner">
+                xs-12 md-6 lg-4
+            </div>
+        </div>
+    </div>
+    <div class="pz-row">
+        <div class="col xs-12 sm-7">
+            <div class="col-inner">
+                xs-12 sm-7
+            </div>
+        </div>
+        <div class="col xs-12 sm-5">
+            <div class="col-inner">
+                xs-12 sm-5
+            </div>
+        </div>
+    </div>
+    <div class="pz-row">
+        <div class="col xs-6">
+            <div class="col-inner">
+                xs-6
+            </div>
+        </div>
+        <div class="col xs-6">
+            <div class="col-inner">
+                xs-6
+            </div>
+        </div>
+    </div>
+    <div class="pz-row">
+        <div class="col xs-12 md-4">
+            <div class="col-inner">
+                xs-12 md-4
+            </div>
+        </div>
+        <div class="col xs-12 md-4">
+            <div class="col-inner">
+                xs-12 md-4
+            </div>
+        </div>
+        <div class="col xs-12 md-4">
+            <div class="col-inner">
+                xs-12 md-4
+            </div>
+        </div>
+    </div>
+    <div class="pz-row">
+        <div class="col xs-12 lg-3">
+            <div class="col-inner">
+                xs-12 lg-3
+            </div>
+        </div>
+        <div class="col xs-12 sm-6 lg-3">
+            <div class="col-inner">
+                xs-12 sm-6 lg-3
+            </div>
+        </div>
+        <div class="col xs-12 sm-6 lg-3">
+            <div class="col-inner">
+                xs-12 sm-6 lg-3
+            </div>
+        </div>
+        <div class="col xs-12 lg-3">
+            <div class="col-inner">
+                xs-12 lg-3
+            </div>
+        </div>
+    </div>
+    <div class="pz-row">
+        <div class="col xs-12 sm-6 md-4 xl-2">
+            <div class="col-inner">
+                xs-12 sm-6 md-4 xl-2
+            </div>
+        </div>
+        <div class="col xs-12 sm-6 md-4 xl-2">
+            <div class="col-inner">
+                xs-12 sm-6 md-4 xl-2
+            </div>
+        </div>
+        <div class="col xs-12 sm-6 md-4 xl-2">
+            <div class="col-inner">
+                xs-12 sm-6 md-4 xl-2
+            </div>
+        </div>
+        <div class="col xs-12 sm-6 md-4 xl-2">
+            <div class="col-inner">
+                xs-12 sm-6 md-4 xl-2
+            </div>
+        </div>
+        <div class="col xs-12 sm-6 md-4 xl-2">
+            <div class="col-inner">
+                xs-12 sm-6 md-4 xl-2
+            </div>
+        </div>
+        <div class="col xs-12 sm-6 md-4 xl-2">
+            <div class="col-inner">
+                xs-12 sm-6 md-4 xl-2
+            </div>
+        </div>
+    </div>
+    <div class="pz-row">
+        <div class="col xs-12 sm-6 md-4 lg-2 xl-1">
+            <div class="col-inner">
+                xs-12 sm-6 md-4 lg-2 xl-1
+            </div>
+        </div>
+        <div class="col xs-12 sm-6 md-4 lg-2 xl-1">
+            <div class="col-inner">
+                xs-12 sm-6 md-4 lg-2 xl-1
+            </div>
+        </div>
+        <div class="col xs-12 sm-6 md-4 lg-2 xl-1">
+            <div class="col-inner">
+                xs-12 sm-6 md-4 lg-2 xl-1
+            </div>
+        </div>
+        <div class="col xs-12 sm-6 md-4 lg-2 xl-1">
+            <div class="col-inner">
+                xs-12 sm-6 md-4 lg-2 xl-1
+            </div>
+        </div>
+        <div class="col xs-12 sm-6 md-4 lg-2 xl-1">
+            <div class="col-inner">
+                xs-12 sm-6 md-4 lg-2 xl-1
+            </div>
+        </div>
+        <div class="col xs-12 sm-6 md-4 lg-2 xl-1">
+            <div class="col-inner">
+                xs-12 sm-6 md-4 lg-2 xl-1
+            </div>
+        </div>
+        <div class="col xs-12 sm-6 md-4 lg-2 xl-1">
+            <div class="col-inner">
+                xs-12 sm-6 md-4 lg-2 xl-1
+            </div>
+        </div>
+        <div class="col xs-12 sm-6 md-4 lg-2 xl-1">
+            <div class="col-inner">
+                xs-12 sm-6 md-4 lg-2 xl-1
+            </div>
+        </div>
+        <div class="col xs-12 sm-6 md-4 lg-2 xl-1">
+            <div class="col-inner">
+                xs-12 sm-6 md-4 lg-2 xl-1
+            </div>
+        </div>
+        <div class="col xs-12 sm-6 md-4 lg-2 xl-1">
+            <div class="col-inner">
+                xs-12 sm-6 md-4 lg-2 xl-1
+            </div>
+        </div>
+        <div class="col xs-12 sm-6 md-4 lg-2 xl-1">
+            <div class="col-inner">
+                xs-12 sm-6 md-4 lg-2 xl-1
+            </div>
+        </div>
+        <div class="col xs-12 sm-6 md-4 lg-2 xl-1">
+            <div class="col-inner">
+                xs-12 sm-6 md-4 lg-2 xl-1
+            </div>
+        </div>
+    </div>
 </body>
 </html>
