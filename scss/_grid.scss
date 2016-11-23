@@ -1,5 +1,5 @@
 /*!
- * Puzzle Grid v1.0.1 by Puzzalea
+ * Puzzle Grid v1.0.2 by Puzzalea
  * Docs: https://github.com/puzzalea/grid
  */
 
@@ -12,11 +12,11 @@
     }
     
     .col {
-        &.#{$size}-left0 {
+        &.#{$size}-left-0 {
             margin-left: 0;
         }
 
-        &.#{$size}-right0 {
+        &.#{$size}-right-0 {
             margin-right: 0;
         }
     }

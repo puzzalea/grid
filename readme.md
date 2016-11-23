@@ -72,7 +72,7 @@ If you only have one `.col` in a `.pz-row`, you can use the center and uncenter 
 - `.sm-center` means the div will be centered at the small width.
 - A div with the chained classes `.xs-center.lg-uncenter` means the div will be centered at the beginning but will uncenter (align left) at the large width.
 
-### Fill
+### Filling
 
 You can use the fill class to have a `.col` fill the remaining space. This is handy if you want a `.col` to fill the remaining space in a `.pz-row `regardless of the size of other elements.
 

@@ -1,5 +1,5 @@
 /*!
- * Puzzle Grid v1.0.1 by Puzzalea
+ * Puzzle Grid v1.0.2 by Puzzalea
  * Docs: https://github.com/puzzalea/grid
  */
 .pz-row {
@@ -112,10 +112,10 @@
   width: 100%;
 }
 
-.col.xs-left0 {
+.col.xs-left-0 {
   margin-left: 0;
 }
-.col.xs-right0 {
+.col.xs-right-0 {
   margin-right: 0;
 }
 
@@ -423,10 +423,10 @@ span.xs-show {
     width: 100%;
   }
 
-  .col.sm-left0 {
+  .col.sm-left-0 {
     margin-left: 0;
   }
-  .col.sm-right0 {
+  .col.sm-right-0 {
     margin-right: 0;
   }
 
@@ -734,10 +734,10 @@ span.xs-show {
     width: 100%;
   }
 
-  .col.md-left0 {
+  .col.md-left-0 {
     margin-left: 0;
   }
-  .col.md-right0 {
+  .col.md-right-0 {
     margin-right: 0;
   }
 
@@ -1045,10 +1045,10 @@ span.xs-show {
     width: 100%;
   }
 
-  .col.lg-left0 {
+  .col.lg-left-0 {
     margin-left: 0;
   }
-  .col.lg-right0 {
+  .col.lg-right-0 {
     margin-right: 0;
   }
 
@@ -1356,10 +1356,10 @@ span.xs-show {
     width: 100%;
   }
 
-  .col.xl-left0 {
+  .col.xl-left-0 {
     margin-left: 0;
   }
-  .col.xl-right0 {
+  .col.xl-right-0 {
     margin-right: 0;
   }
 
