@@ -10,10 +10,19 @@
         font-family: "Open Sans", sans-serif;
     }
     
+    h2 {
+        text-align: center;
+    }
+    
     .pz-row {
         padding-top: 30px;
         padding-bottom: 30px;
-        border-bottom: 3px solid rgba(141, 154, 220, 0.3);
+        border-bottom: 5px solid rgba(232, 92, 141, 0.25);
+    }
+    
+    .pz-row .pz-row {
+        padding: 0;
+        border: 0;
     }
     
     .col {
@@ -21,11 +30,8 @@
     }
     
     .col-inner {
-        display: flex;
         flex: 0 1 auto;
-        align-items: center;
-        justify-content: center;
-        background-color: #5060B4;
+        background-color: rgba(92, 146, 232, 0.5);
         color: #fff;
         font-size: 18px;
         font-weight: 600;
@@ -244,6 +250,114 @@
         <div class="col xs-12 sm-6 md-4 lg-2 xl-1">
             <div class="col-inner">
                 xs-12 sm-6 md-4 lg-2 xl-1
+            </div>
+        </div>
+    </div>
+    <h2>Nesting Rows/Columns</h2>
+    <div class="pz-row">
+        <div class="col xs-12 lg-8">
+            <div class="col-inner">
+                xs-12 lg-8
+                <div class="pz-row">
+                    <div class="col xs-12 md-6 lg-8">
+                        <div class="col-inner">
+                            xs-12 md-6 lg-8
+                        </div>
+                    </div>
+                    <div class="col xs-12 md-6 lg-4">
+                        <div class="col-inner">
+                            xs-12 md-6 lg-4
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col xs-12 lg-4">
+            <div class="col-inner">
+                xs-12 lg-4
+                <div class="pz-row">
+                    <div class="col xs-12 sm-4 lg-12">
+                        <div class="col-inner">
+                            xs-12 sm-6 lg-12
+                        </div>
+                    </div>
+                    <div class="col xs-12 sm-4 lg-12">
+                        <div class="col-inner">
+                            xs-12 sm-6 lg-12
+                        </div>
+                    </div>
+                    <div class="col xs-12 sm-4 lg-12">
+                        <div class="col-inner">
+                            xs-12 sm-6 lg-12
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <h2>Pushing</h2>
+    <div class="pz-row">
+        <div class="col xs-8 xs-left-1 sm-left-2 md-4 md-left-3 lg-left-4 xl-3 xl-left-5">
+            <div class="col-inner">
+                xs-8 xs-left-1 sm-left-2 md-4 md-left-3 lg-left-4 xl-3 xl-left-5
+            </div>
+        </div>
+    </div>
+    <div class="pz-row">
+        <div class="col xs-4 xs-right-4 lg-7 lg-right-1">
+            <div class="col-inner">
+                xs-4 xs-right-4 lg-7 lg-right-1
+            </div>
+        </div>
+        <div class="col xs-4 lg-4">
+            <div class="col-inner">
+                xs-4 lg-4
+            </div>
+        </div>
+    </div>
+    <h2>Centering</h2>
+    <div class="pz-row">
+        <div class="col xs-6 xs-center sm-uncenter md-center lg-uncenter xl-center">
+            <div class="col-inner">
+                xs-6 xs-center sm-uncenter md-center lg-uncenter xl-center
+            </div>
+        </div>
+    </div>
+    <h2>Filling</h2>
+    <div class="pz-row">
+        <div class="col xs-12 sm-4 lg-2">
+            <div class="col-inner">
+                xs-12 sm-4 lg-2
+            </div>
+        </div>
+        <div class="col xs-6 sm-4 lg-2">
+            <div class="col-inner">
+                xs-6 sm-4 lg-2
+            </div>
+        </div>
+        <div class="col xs-fill">
+            <div class="col-inner">
+                xs-fill
+            </div>
+        </div>
+    </div>
+    <div class="pz-row">
+        <div class="col xs-fill md-4 md-unfill lg-fill">
+            <div class="col-inner">
+                xs-fill md-4 md-unfill lg-fill
+            </div>
+        </div>
+        <div class="col xs-12 md-4 lg-3">
+            <div class="col-inner">
+                xs-12 md-4 lg-3
+            </div>
+        </div>
+    </div>
+    <h2>Show/Hide</h2>
+    <div class="pz-row">
+        <div class="col xs-12">
+            <div class="col-inner xs-show md-hide xl-show">
+                xs-12 xs-show md-hide xl-show
             </div>
         </div>
     </div>
