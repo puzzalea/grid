@@ -21,10 +21,12 @@ Puzzle Grid was generated using SASS. It was coded to be extremely flexible and 
 
 1. Copy the files in the  `scss` directory to your project.
 2. Adjust variables in the `_variables` partial to your needs. There is no need to edit the `_mixins` or `_grid` partials. The `puzzle-grid.scss` file indicates to order you will need to include the partials. In the `_variables` partial, you can change:
-  - **The framework prefix** - Maybe you don't need a prefix, just change it to an empty string. Maybe you want to use your own project prefix, idc.
-  - **Sizes/breakpoints** - Make more sizes, make less sizes, change the breakpoints, etc. I would advise having at least one "start" breakpoint set to `0` as the base of your grid (by default, this is `xs`).
-  - **Number of columns** - By default you have a 12 column grid, but you can change it to whatever you like. Make a 37 column grid, go nuts.
-  - **Miscellaneous classes** - Are your designers silly and say things like, "Oh, yeah, I'll design this in a 12 column grid," and then they put 5 things in a row? ¯\\\_(ツ)_/¯ No need to worry, Puzzle Grid offers the ability to create arbitrary classes.
+  - `$prefix` - String, the framework prefix. Maybe you don't need a prefix, just change it to an empty string. Maybe you want to use your own project prefix, idc.
+  - `$sizes` - SASS map, sizes/breakpoints for generating grid classes. The keys are the names of the breakpoints, and the values are the breakpoint size. Make more sizes, make less sizes, change the sizes, etc. I would advise having at least one "start" breakpoint set to `0` as the base of your grid (by default, this key is `xs`).
+  - `$max-width` - String, max width of rows.
+  - `$col-num` - Integer, number of columns. By default you have a 12 column grid, but you can change it to whatever you like. Make a 37 column grid, go nuts.
+  - `$miscellaneous_widths` - SASS map, miscellaneous column widths. Are your designers silly and say things like, "Oh, yeah, I'll design this in a 12 column grid," and then they put 5 things in a row? ¯\\\_(ツ)_/¯ No need to worry, Puzzle Grid offers the ability to create arbitrary classes.
+  - `$col-inner-top-bottom-margin`, `$col-inner-left-right-margin`, and `$col-inner-padding` - SASS maps, `col-inner` class margin and padding. You can adjust the margin and padding at various breakpoints for this class. The keys in this map must be present in the `$sizes` map. The values for the `$col-inner-padding` map can be any valid values for the margin and padding CSS properties (e.g. `10px`, `0 15px`, `1rem 2rem`, `5px 10px 15px 0`, etc.). The values for the `$col-inner-top-bottom-margin` and `$col-inner-left-right-margin` must be single units (e.g. `10px`, `1rem`, etc.) due to SASS math performed on these values.
 3. Either compile `puzzle-grid.scss` as-is, or include the `_variables`, `_mixins`, and `_grid` partials in your SCSS in that order and compile them with the rest of your styles.
 
 ## How to Use

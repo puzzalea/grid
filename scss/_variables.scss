@@ -27,3 +27,16 @@ $miscellaneous_widths: (
     three-fifths: $col-num / 5 * 3,
     four-fifths: $col-num / 5 * 4
 );
+
+$col-inner-top-bottom-margin: (
+    xs: 10px
+);
+
+$col-inner-left-right-margin: (
+    xs: 10px
+);
+
+$col-inner-padding: (
+    xs: 10px,
+    md: 15px
+);

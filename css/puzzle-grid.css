@@ -1,7 +1,11 @@
 /*!
- * Puzzle Grid v1.0.2 by Puzzalea
+ * Puzzle Grid v1.1.0 by Puzzalea
  * Docs: https://github.com/puzzalea/grid
  */
+.pz-row, .col, .col-inner {
+  box-sizing: border-box;
+}
+
 .pz-row {
   display: -webkit-box;
   display: -webkit-flex;
@@ -19,13 +23,6 @@
   -ms-flex: 0 1 auto;
   flex: 0 1 auto;
   min-width: 0;
-}
-
-.col-inner {
-  box-sizing: border-box;
-  width: calc(100% - 20px);
-  margin: 10px;
-  padding: 15px;
 }
 
 .col.xs-1 {
@@ -336,6 +333,15 @@ span.xs-show {
 
 .xs-hide {
   display: none;
+}
+
+.col-inner {
+  width: calc(100% - 20px);
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
 }
 
 @media all and (min-width: 480px) {
@@ -958,6 +964,10 @@ span.xs-show {
 
   .md-hide {
     display: none;
+  }
+
+  .col-inner {
+    padding: 15px;
   }
 }
 @media all and (min-width: 850px) {
