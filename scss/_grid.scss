@@ -1,5 +1,5 @@
 /*!
- * Puzzle Grid v1.1.0 by Puzzalea
+ * Puzzle Grid v1.1.1 by Puzzalea
  * Docs: https://github.com/puzzalea/grid
  */
 
@@ -33,7 +33,7 @@
         }
     }
 
-    @each $name, $value in $miscellaneous_widths {
+    @each $name, $value in $miscellaneous-widths {
         .col {
             &.#{$size}-#{$name} {
                 @include flex-basis(100% / $col_num * $value);

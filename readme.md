@@ -4,7 +4,7 @@ Just another CSS grid.
 
 ## Introduction
 
-Puzzle Grid is a responsive flexbox grid created [Puzzalea](https://github.com/puzzalea) (a.k.a. [caraheacock](https://github.com/caraheacock/)).
+Puzzle Grid is a responsive flexbox grid created by [Puzzalea](https://github.com/puzzalea) (a.k.a. [caraheacock](https://github.com/caraheacock/)).
 
 I made this grid because I didn't like the other grids. I wanted a flexible grid that was JUST a grid (no other utility classes) and used flexbox. I designed Puzzle Grid with flexibility in mind; many class names, breakpoints, etc. are customizable. You can even change the number of columns if you need to.
 
