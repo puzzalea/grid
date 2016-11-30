@@ -8,10 +8,7 @@ engines:
         enabled: false
 ratings:
   paths:
-  - app/**
-  - lib/**
-  - "**.rb"
-  - "**.go"
+    - "**.css"
 exclude_paths:
-- spec/**/*
-- "**/vendor/**/*"
+  - spec/**/*
+  - "**/vendor/**/*"
