@@ -1,91 +1,91 @@
 /*!
- * Puzzle Grid v1.1.1 by Puzzalea
+ * Puzzle Grid v1.2.0 by Puzzalea
  * Docs: https://github.com/puzzalea/grid
  */
 
 @mixin make_columns($size) {
     @for $i from 1 through $col_num {
-        .col.#{$size}-#{$i} {
+        .#{$prefix}col.#{$prefix}#{$size}-#{$i} {
             @include flex-basis(100% / $col_num * $i);
             width: 100% / $col_num * $i;
         }
     }
     
-    .col {
-        &.#{$size}-left-0 {
+    .#{$prefix}col {
+        &.#{$prefix}#{$size}-left-0 {
             margin-left: 0;
         }
 
-        &.#{$size}-right-0 {
+        &.#{$prefix}#{$size}-right-0 {
             margin-right: 0;
         }
     }
 
     @for $i from 1 to $col_num {
-        .col {
-            &.#{$size}-left-#{$i} {
+        .#{$prefix}col {
+            &.#{$prefix}#{$size}-left-#{$i} {
                 margin-left: 100% / $col_num * $i;
             }
 
-            &.#{$size}-right-#{$i} {
+            &.#{$prefix}#{$size}-right-#{$i} {
                 margin-right: 100% / $col_num * $i;
             }
         }
     }
 
     @each $name, $value in $miscellaneous-widths {
-        .col {
-            &.#{$size}-#{$name} {
+        .#{$prefix}col {
+            &.#{$prefix}#{$size}-#{$name} {
                 @include flex-basis(100% / $col_num * $value);
                 width: 100% / $col_num * $value;
             }
     
-            &.#{$size}-left-#{$name} {
+            &.#{$prefix}#{$size}-left-#{$name} {
                 margin-left: 100% / $col_num * $value;
             }
     
-            &.#{$size}-right-#{$name} {
+            &.#{$prefix}#{$size}-right-#{$name} {
                 margin-right: 100% / $col_num * $value;
             }
         }
     }
     
-    .col {
-        &.#{$size}-center {
+    .#{$prefix}col {
+        &.#{$prefix}#{$size}-center {
             margin: 0 auto;
         }
         
-        &.#{$size}-uncenter {
+        &.#{$prefix}#{$size}-uncenter {
             margin: 0;
         }
         
-        &.#{$size}-fill {
+        &.#{$prefix}#{$size}-fill {
             @include flex-grow(1);
         }
         
-        &.#{$size}-unfill {
+        &.#{$prefix}#{$size}-unfill {
             @include flex-grow(0);
         }
     }
     
-    .#{$size}-show {
+    .#{$prefix}#{$size}-show {
         display: block;
     }
     
-    .#{$prefix}row.#{$size}-show {
+    .#{$prefix}row.#{$prefix}#{$size}-show {
         @include display-flex;
     }
     
-    span.#{$size}-show {
+    span.#{$prefix}#{$size}-show {
         display: inline;
     }
     
-    .#{$size}-hide {
+    .#{$prefix}#{$size}-hide {
         display: none;
     }
     
     @if map-has-key($col-inner-top-bottom-margin, $size) or map-has-key($col-inner-left-right-margin, $size) or map-has-key($col-inner-padding, $size) {
-        .col-inner {
+        .#{$prefix}col-inner {
             @if map-has-key($col-inner-left-right-margin, $size) {
                 $left-right-margin: map-get($col-inner-left-right-margin, $size);
                 @if $left-right-margin == 0 {
@@ -108,7 +108,7 @@
     }
 }
 
-.#{$prefix}row, .col, .col-inner {
+.#{$prefix}row, .#{$prefix}col, .#{$prefix}col-inner {
     box-sizing: border-box;
 }
 
@@ -119,7 +119,7 @@
     margin: 0 auto;
 }
 
-.col {
+.#{$prefix}col {
     @include flex(0 1 auto);
     min-width: 0;
 }

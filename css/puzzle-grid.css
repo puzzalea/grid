@@ -1,12 +1,12 @@
 /*!
- * Puzzle Grid v1.1.1 by Puzzalea
+ * Puzzle Grid v1.2.0 by Puzzalea
  * Docs: https://github.com/puzzalea/grid
  */
-.pz-row, .col, .col-inner {
+.row, .col, .col-inner {
   box-sizing: border-box;
 }
 
-.pz-row {
+.row {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -320,7 +320,7 @@
   display: block;
 }
 
-.pz-row.xs-show {
+.row.xs-show {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -640,7 +640,7 @@ span.xs-show {
     display: block;
   }
 
-  .pz-row.sm-show {
+  .row.sm-show {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -951,7 +951,7 @@ span.xs-show {
     display: block;
   }
 
-  .pz-row.md-show {
+  .row.md-show {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -1266,7 +1266,7 @@ span.xs-show {
     display: block;
   }
 
-  .pz-row.lg-show {
+  .row.lg-show {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -1577,7 +1577,7 @@ span.xs-show {
     display: block;
   }
 
-  .pz-row.xl-show {
+  .row.xl-show {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
