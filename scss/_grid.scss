@@ -3,91 +3,91 @@
  * Docs: https://github.com/puzzalea/grid
  */
 
-@mixin make_columns($size) {
-    @for $i from 1 through $col_num {
-        .#{$prefix}col.#{$prefix}#{$size}-#{$i} {
-            @include flex-basis(100% / $col_num * $i);
-            width: 100% / $col_num * $i;
+@mixin pz-grid-make-columns($size) {
+    @for $i from 1 through $pz-grid-col-num {
+        .#{$pz-grid-prefix}col.#{$pz-grid-prefix}#{$size}-#{$i} {
+            @include pz-grid-flex-basis(100% / $pz-grid-col-num * $i);
+            width: 100% / $pz-grid-col-num * $i;
         }
     }
     
-    .#{$prefix}col {
-        &.#{$prefix}#{$size}-left-0 {
+    .#{$pz-grid-prefix}col {
+        &.#{$pz-grid-prefix}#{$size}-left-0 {
             margin-left: 0;
         }
 
-        &.#{$prefix}#{$size}-right-0 {
+        &.#{$pz-grid-prefix}#{$size}-right-0 {
             margin-right: 0;
         }
     }
 
-    @for $i from 1 to $col_num {
-        .#{$prefix}col {
-            &.#{$prefix}#{$size}-left-#{$i} {
-                margin-left: 100% / $col_num * $i;
+    @for $i from 1 to $pz-grid-col-num {
+        .#{$pz-grid-prefix}col {
+            &.#{$pz-grid-prefix}#{$size}-left-#{$i} {
+                margin-left: 100% / $pz-grid-col-num * $i;
             }
 
-            &.#{$prefix}#{$size}-right-#{$i} {
-                margin-right: 100% / $col_num * $i;
+            &.#{$pz-grid-prefix}#{$size}-right-#{$i} {
+                margin-right: 100% / $pz-grid-col-num * $i;
             }
         }
     }
 
-    @each $name, $value in $miscellaneous-widths {
-        .#{$prefix}col {
-            &.#{$prefix}#{$size}-#{$name} {
-                @include flex-basis(100% / $col_num * $value);
-                width: 100% / $col_num * $value;
+    @each $name, $value in $pz-grid-miscellaneous-widths {
+        .#{$pz-grid-prefix}col {
+            &.#{$pz-grid-prefix}#{$size}-#{$name} {
+                @include pz-grid-flex-basis(100% / $pz-grid-col-num * $value);
+                width: 100% / $pz-grid-col-num * $value;
             }
     
-            &.#{$prefix}#{$size}-left-#{$name} {
-                margin-left: 100% / $col_num * $value;
+            &.#{$pz-grid-prefix}#{$size}-left-#{$name} {
+                margin-left: 100% / $pz-grid-col-num * $value;
             }
     
-            &.#{$prefix}#{$size}-right-#{$name} {
-                margin-right: 100% / $col_num * $value;
+            &.#{$pz-grid-prefix}#{$size}-right-#{$name} {
+                margin-right: 100% / $pz-grid-col-num * $value;
             }
         }
     }
     
-    .#{$prefix}col {
-        &.#{$prefix}#{$size}-center {
+    .#{$pz-grid-prefix}col {
+        &.#{$pz-grid-prefix}#{$size}-center {
             margin: 0 auto;
         }
         
-        &.#{$prefix}#{$size}-uncenter {
+        &.#{$pz-grid-prefix}#{$size}-uncenter {
             margin: 0;
         }
         
-        &.#{$prefix}#{$size}-fill {
-            @include flex-grow(1);
+        &.#{$pz-grid-prefix}#{$size}-fill {
+            @include pz-grid-flex-grow(1);
         }
         
-        &.#{$prefix}#{$size}-unfill {
-            @include flex-grow(0);
+        &.#{$pz-grid-prefix}#{$size}-unfill {
+            @include pz-grid-flex-grow(0);
         }
     }
     
-    .#{$prefix}#{$size}-show {
+    .#{$pz-grid-prefix}#{$size}-show {
         display: block;
     }
     
-    .#{$prefix}row.#{$prefix}#{$size}-show {
-        @include display-flex;
+    .#{$pz-grid-prefix}row.#{$pz-grid-prefix}#{$size}-show {
+        @include pz-grid-display-flex;
     }
     
-    span.#{$prefix}#{$size}-show {
+    span.#{$pz-grid-prefix}#{$size}-show {
         display: inline;
     }
     
-    .#{$prefix}#{$size}-hide {
+    .#{$pz-grid-prefix}#{$size}-hide {
         display: none;
     }
     
-    @if map-has-key($col-inner-top-bottom-margin, $size) or map-has-key($col-inner-left-right-margin, $size) or map-has-key($col-inner-padding, $size) {
-        .#{$prefix}col-inner {
-            @if map-has-key($col-inner-left-right-margin, $size) {
-                $left-right-margin: map-get($col-inner-left-right-margin, $size);
+    @if map-has-key($pz-grid-col-inner-top-bottom-margin, $size) or map-has-key($pz-grid-col-inner-left-right-margin, $size) or map-has-key($pz-grid-col-inner-padding, $size) {
+        .#{$pz-grid-prefix}col-inner {
+            @if map-has-key($pz-grid-col-inner-left-right-margin, $size) {
+                $left-right-margin: map-get($pz-grid-col-inner-left-right-margin, $size);
                 @if $left-right-margin == 0 {
                     width: 100%;
                 } @else {
@@ -96,40 +96,40 @@
                 margin-left: $left-right-margin;
                 margin-right: $left-right-margin;
             }
-            @if map-has-key($col-inner-top-bottom-margin, $size) {
-                $top-bottom-margin: map-get($col-inner-top-bottom-margin, $size);
+            @if map-has-key($pz-grid-col-inner-top-bottom-margin, $size) {
+                $top-bottom-margin: map-get($pz-grid-col-inner-top-bottom-margin, $size);
                 margin-top: $top-bottom-margin;
                 margin-bottom: $top-bottom-margin;
             }
-            @if map-has-key($col-inner-padding, $size) {
-                padding: map-get($col-inner-padding, $size);
+            @if map-has-key($pz-grid-col-inner-padding, $size) {
+                padding: map-get($pz-grid-col-inner-padding, $size);
             }
         }
     }
 }
 
-.#{$prefix}row, .#{$prefix}col, .#{$prefix}col-inner {
+.#{$pz-grid-prefix}row, .#{$pz-grid-prefix}col, .#{$pz-grid-prefix}col-inner {
     box-sizing: border-box;
 }
 
-.#{$prefix}row {
-    @include display-flex;
-    @include flex-wrap(wrap);
-    max-width: $max-width;
+.#{$pz-grid-prefix}row {
+    @include pz-grid-display-flex;
+    @include pz-grid-flex-wrap(wrap);
+    max-width: $pz-grid-max-width;
     margin: 0 auto;
 }
 
-.#{$prefix}col {
-    @include flex(0 1 auto);
+.#{$pz-grid-prefix}col {
+    @include pz-grid-flex(0 1 auto);
     min-width: 0;
 }
 
-@each $size, $value in $sizes {
+@each $size, $value in $pz-grid-sizes {
     @if $value == 0 {
-        @include make_columns($size);
+        @include pz-grid-make-columns($size);
     } @else {
-        @include breakpoint($value) {
-            @include make_columns($size);
+        @include pz-grid-breakpoint($value) {
+            @include pz-grid-make-columns($size);
         }
     }
 }

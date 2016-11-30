@@ -3,10 +3,10 @@
 //-----------//
 
 // CSS prefix
-$prefix: '';
+$pz-grid-prefix: '';
 
 // Sizes for grid system and media queries
-$sizes: (
+$pz-grid-sizes: (
     xs: 0,
     sm: 480px,
     md: 660px,
@@ -14,29 +14,29 @@ $sizes: (
     xl: 1024px
 );
 
-$max-width: 1200px;
+$pz-grid-max-width: 1200px;
 
-$col-num: 12;
-$miscellaneous-widths: (
-    one-eighth: $col-num / 8,
-    three-eighths: $col-num / 8 * 3,
-    five-eighths: $col-num / 8 * 5,
-    seven-eighths: $col-num / 8 * 7,
-    one-fifth: $col-num / 5,
-    two-fifths: $col-num / 5 * 2,
-    three-fifths: $col-num / 5 * 3,
-    four-fifths: $col-num / 5 * 4
+$pz-grid-col-num: 12;
+$pz-grid-miscellaneous-widths: (
+    one-eighth: $pz-grid-col-num / 8,
+    three-eighths: $pz-grid-col-num / 8 * 3,
+    five-eighths: $pz-grid-col-num / 8 * 5,
+    seven-eighths: $pz-grid-col-num / 8 * 7,
+    one-fifth: $pz-grid-col-num / 5,
+    two-fifths: $pz-grid-col-num / 5 * 2,
+    three-fifths: $pz-grid-col-num / 5 * 3,
+    four-fifths: $pz-grid-col-num / 5 * 4
 );
 
-$col-inner-top-bottom-margin: (
+$pz-grid-col-inner-top-bottom-margin: (
     xs: 10px
 );
 
-$col-inner-left-right-margin: (
+$pz-grid-col-inner-left-right-margin: (
     xs: 10px
 );
 
-$col-inner-padding: (
+$pz-grid-col-inner-padding: (
     xs: 10px,
     md: 15px
 );
