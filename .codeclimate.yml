@@ -1,0 +1,17 @@
+engines:
+  csslint:
+    enabled: true
+    checks:
+      box-sizing:
+        enabled: false
+      compatible-vendor-prefixes:
+        enabled: false
+ratings:
+  paths:
+    - app/**
+    - lib/**
+    - "**.rb"
+    - "**.go"
+exclude_paths:
+  - spec/**/*
+  - "**/vendor/**/*"

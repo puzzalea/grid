@@ -1,2 +1,3 @@
 .*
+!.codeclimate.yml
 !.gitignore

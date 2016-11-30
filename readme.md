@@ -1,5 +1,9 @@
 # Puzzle Grid
 
+v.1.2.0
+
+[![Code Climate](https://codeclimate.com/github/puzzalea/grid/badges/gpa.svg)](https://codeclimate.com/github/puzzalea/grid)
+
 Just another CSS grid.
 
 ## Introduction
@@ -21,8 +25,8 @@ Puzzle Grid was generated using SASS. It was coded to be extremely flexible and 
 
 1. Copy the files in the  `scss` directory to your project.
 2. Adjust variables in the `_variables` partial to your needs. There is no need to edit the `_mixins` or `_grid` partials. The `puzzle-grid.scss` file indicates to order you will need to include the partials. In the `_variables` partial, you can change:
-  - `$prefix` - String, the framework prefix. Maybe you don't need a prefix, just change it to an empty string. Maybe you want to use your own project prefix, idc.
-  - `$sizes` - SASS map, sizes/breakpoints for generating grid classes. The keys are the names of the breakpoints, and the values are the breakpoint size. Make more sizes, make less sizes, change the sizes, etc. I would advise having at least one "start" breakpoint set to `0` as the base of your grid (by default, this key is `xs`).
+  - `$prefix` - String, the framework prefix. By default the prefix is an empty string, but if you think Puzzle Grid's classees will conflict with your styles or other frameworks, you can add a prefix. For example, if you change it to `pz-`, all Puzzle Grid classes will start with `pz-`, such as `pz-row`, `pz-col`, `pz-xs-12`, etc.
+  - `$sizes` - SASS map, sizes/breakpoints for generating grid classes. The keys are the names of the breakpoints, and the values are the breakpoint size. Make more sizes, make less sizes, change the sizes, etc. I would advise having at least one "start" breakpoint set to `0` as the base of your grid (by default, this key is `xs`), and order them from smallest to largest for best mobile-first results.
   - `$max-width` - String, max width of rows.
   - `$col-num` - Integer, number of columns. By default you have a 12 column grid, but you can change it to whatever you like. Make a 37 column grid, go nuts.
   - `$miscellaneous_widths` - SASS map, miscellaneous column widths. Are your designers silly and say things like, "Oh, yeah, I'll design this in a 12 column grid," and then they put 5 things in a row? ¯\\\_(ツ)_/¯ No need to worry, Puzzle Grid offers the ability to create arbitrary classes.
@@ -43,7 +47,7 @@ Puzzle Grid's classes contain the size they take effect and how many columns the
 - `lg` - large, 850px
 - `xl` - extra large, 1024px
 
-To use these classes, with the except of classes for hiding and showing, divs MUST have the class `.col` and be direct children of a div with the class `.pz-row`. The `.pz-row` container is a flex container, and the `.col` divs inside employ flexbox to change size.
+To use these classes, with the except of classes for hiding and showing, divs MUST have the class `.col` and be direct children of a div with the class `.row`. The `.row` container is a flex container, and the `.col` divs inside employ flexbox to change size.
 
 ### Widths
 
@@ -69,16 +73,16 @@ We also have classes for pushing.
 
 ### Centering
 
-If you only have one `.col` in a `.pz-row`, you can use the center and uncenter classes.
+If you only have one `.col` in a `.row`, you can use the center and uncenter classes.
 
 - `.sm-center` means the div will be centered at the small width.
 - A div with the chained classes `.xs-center.lg-uncenter` means the div will be centered at the beginning but will uncenter (align left) at the large width.
 
 ### Filling
 
-You can use the fill class to have a `.col` fill the remaining space. This is handy if you want a `.col` to fill the remaining space in a `.pz-row `regardless of the size of other elements.
+You can use the fill class to have a `.col` fill the remaining space. This is handy if you want a `.col` to fill the remaining space in a `.row `regardless of the size of other elements.
 
-- `.xs-fill` means the `.col` will fill the remaining space in a `.pz-row`.
+- `.xs-fill` means the `.col` will fill the remaining space in a `.row`.
 - A `.col` with the chained classes `.xs-fill.lg-unfill` means the div will fill the remaining space to start, and will revert to its automatic size at the large width.
 
 ### Show/Hide
@@ -89,7 +93,7 @@ We have utility classes for hiding and showing, which do NOT have to be used str
 
 ### Spacing
 
-There is a utility class called `.col-inner` which is added as needed for inner margin/padding. Margin/padding is not directly applied to `.col` divs (except left and right pushes) to allow us to nest `.pz-row`s and `.col`s within `.pz-row`s and `.col`s if needed, without chaining the effects of margin and padding.
+There is a utility class called `.col-inner` which is added as needed for inner margin/padding. Margin/padding is not directly applied to `.col` divs (except left and right pushes) to allow us to nest `.row`s and `.col`s within `.row`s and `.col`s if needed, without chaining the effects of margin and padding.
 
 ## Questions? Comments?
 
