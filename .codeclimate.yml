@@ -8,10 +8,10 @@ engines:
         enabled: false
 ratings:
   paths:
-    - app/**
-    - lib/**
-    - "**.rb"
-    - "**.go"
+  - app/**
+  - lib/**
+  - "**.rb"
+  - "**.go"
 exclude_paths:
-  - spec/**/*
-  - "**/vendor/**/*"
+- spec/**/*
+- "**/vendor/**/*"
