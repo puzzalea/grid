@@ -54,7 +54,7 @@
             width: 100% / $pz-grid-col-num * $i;
         }
     }
-    
+
     .#{$pz-grid-prefix}col {
         &.#{$pz-grid-prefix}#{$size}-left-0 {
             margin-left: 0;
@@ -87,7 +87,7 @@
             &.#{$pz-grid-prefix}#{$size}-left-#{$name} {
                 margin-left: 100% / $pz-grid-col-num * $value;
             }
-    
+
             &.#{$pz-grid-prefix}#{$size}-right-#{$name} {
                 margin-right: 100% / $pz-grid-col-num * $value;
             }
