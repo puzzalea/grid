@@ -6,8 +6,11 @@ engines:
         enabled: false
       compatible-vendor-prefixes:
         enabled: false
+  scss-lint:
+    enabled: true
 ratings:
   paths:
+    - "**.scss"
     - "**.css"
 exclude_paths:
   - spec/**/*
