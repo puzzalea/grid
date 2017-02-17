@@ -10,6 +10,15 @@ engines:
     enabled: true
     exclude_paths:
       - "**.css"
+    checks:
+      Comment:
+        enabled: false
+      Indentation:
+        enabled: false
+      SingleLinePerSelector:
+        enabled: false
+      VendorPrefix:
+        enabled: false
 ratings:
   paths:
     - "**.scss"

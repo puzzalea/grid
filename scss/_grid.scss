@@ -83,7 +83,7 @@
                 @include pz-grid-flex-basis(100% / $pz-grid-col-num * $value);
                 width: 100% / $pz-grid-col-num * $value;
             }
-    
+
             &.#{$pz-grid-prefix}#{$size}-left-#{$name} {
                 margin-left: 100% / $pz-grid-col-num * $value;
             }
@@ -93,41 +93,41 @@
             }
         }
     }
-    
+
     .#{$pz-grid-prefix}col {
         &.#{$pz-grid-prefix}#{$size}-center {
             margin: 0 auto;
         }
-        
+
         &.#{$pz-grid-prefix}#{$size}-uncenter {
             margin: 0;
         }
-        
+
         &.#{$pz-grid-prefix}#{$size}-fill {
             @include pz-grid-flex-grow(1);
         }
-        
+
         &.#{$pz-grid-prefix}#{$size}-unfill {
             @include pz-grid-flex-grow(0);
         }
     }
-    
+
     .#{$pz-grid-prefix}#{$size}-show {
         display: block;
     }
-    
+
     .#{$pz-grid-prefix}row.#{$pz-grid-prefix}#{$size}-show {
         @include pz-grid-display-flex;
     }
-    
+
     span.#{$pz-grid-prefix}#{$size}-show {
         display: inline;
     }
-    
+
     .#{$pz-grid-prefix}#{$size}-hide {
         display: none;
     }
-    
+
     @if map-has-key($pz-grid-col-inner-top-bottom-margin, $size) or map-has-key($pz-grid-col-inner-left-right-margin, $size) or map-has-key($pz-grid-col-inner-padding, $size) {
         .#{$pz-grid-prefix}col-inner {
             @if map-has-key($pz-grid-col-inner-left-right-margin, $size) {
